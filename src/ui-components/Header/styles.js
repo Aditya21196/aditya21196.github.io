@@ -1,10 +1,11 @@
 import {makeStyle} from "../../utils";
+import view,{HEADER_SIZE} from "../../Enums";
 
 
 const styles={}
 
 styles['container']=makeStyle({
-    height:'80px',
+    height:HEADER_SIZE[view.DESKTOP],
     width:'100%',
     backgroundColor:'rgba(255,255,255,0.7)',
     position:'absolute',

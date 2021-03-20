@@ -1,4 +1,5 @@
 import {makeStyle} from "../../../../utils";
+import view from '../../../../Enums'
 
 const styles = {};
 
@@ -11,7 +12,8 @@ styles['container']=makeStyle({
     alignItems:'center'
 },{
     background:'url("landing_tab.jpg") 0% 50% / cover',
-    height:600
+    height:600,
+    justifyContent:'center'
 },{
     background:'url("landing_mobile.jpg") 0% 160px / contain no-repeat',
     height:500
@@ -19,24 +21,47 @@ styles['container']=makeStyle({
 
 styles['name-container']=makeStyle({
     height:'fit-content',
-    boxSizing:'border-box'
+    boxSizing:'border-box',
+
 },{
     padding:30
+},{
+    width: 700,
+    alignContent: 'center',
+    marginTop: 200
+},{
+    width: '100%',
+    alignContent: 'center',
+    marginTop: 90,
+    paddingLeft:20
 })
 
 styles['big-text']=makeStyle({
 
 },{
     fontSize:80,
-    display:'block'
+    display:'block',
+    color:'honeydew'
+},{
+    fontSize:40,
+    color:'honeydew'
+},{
+    fontSize:30,
+    color:'black'
 })
 
 styles['describe-text']=makeStyle({
-
+    color:'black'
 },{
     fontSize:30,
+
+},{
+    fontSize:20,
+    color:'black'
+},{
+    fontSize:17,
+    color:'black'
 })
 
-console.log(styles)
 
 export default styles;
