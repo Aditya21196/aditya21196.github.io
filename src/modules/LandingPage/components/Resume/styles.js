@@ -4,7 +4,7 @@ const styles = {}
 
 styles['heading']=makeStyle({
     fontSize:40,
-    color:'#3c415c'
+    color:'#fed049'
 })
 
 styles['resume-container']=makeStyle({
@@ -16,7 +16,11 @@ styles['resume-container']=makeStyle({
 })
 
 styles['exp-title']=makeStyle({
-    fontSize:30
+    fontSize:25
+})
+
+styles['exp-ptr']=makeStyle({
+    fontSize:16
 })
 
 export default styles;

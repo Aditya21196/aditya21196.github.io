@@ -14,7 +14,7 @@ class Resume extends Component {
         <Slide left><div style={this.gs('exp-title')}>{title}</div></Slide>
         <Fade delay={800} cascade>
             <ul>
-        {pointers.map((p,i) => <li key={`${title}_exp_${i}`}>{p}</li>)}
+        {pointers.map((p,i) => <li style={this.gs('exp-ptr')} key={`${title}_exp_${i}`}>{p}</li>)}
             </ul>
         </Fade>
     </div>
