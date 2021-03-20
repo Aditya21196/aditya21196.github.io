@@ -1,25 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import p5 from 'p5';
+import React from 'react';
+import Component from './ui-components/Component';
+import {withResizer} from './HOCs';
+import LandingPage from "./modules/LandingPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi, I am Aditya....
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+render =() => <LandingPage/>
 }
 
-export default App;
+export default withResizer(App);
