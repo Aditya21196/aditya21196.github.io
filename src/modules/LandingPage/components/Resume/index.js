@@ -6,13 +6,15 @@ import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 import {RESUME_POINTERS} from "../../../../Enums";
 import Flash from "react-reveal/src/simple/Flash";
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+import Collapse from '@material-ui/core/Collapse';
 
 class Resume extends Component {
     styles=styles;
 
     renderExperience = (title,pointers=[]) => <div style={this.gs('exp-parent')}>
         <Slide left><div style={this.gs('exp-title')}>{title}</div></Slide>
-        <Fade delay={800} cascade>
+        <Fade exit delay={800} cascade>
             <ul>
         {pointers.map((p,i) => <li style={this.gs('exp-ptr')} key={`${title}_exp_${i}`}>{p}</li>)}
             </ul>
@@ -23,7 +25,8 @@ class Resume extends Component {
         return (
             <div style={this.gs('resume-container')}>
                 <Flash><div style={this.gs('heading')}>RESUME</div></Flash>
-                {RESUME_POINTERS.map(ptr => this.renderExperience(ptr.title,ptr.pointers))}
+                {RESUME_POINTERS.map((ptr) => this.renderExperience(ptr.title,ptr.pointers)
+                )}
             </div>
         );
     }

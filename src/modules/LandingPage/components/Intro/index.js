@@ -5,6 +5,14 @@ import {withResizer} from "../../../../HOCs";
 import classes from './classes.module.css';
 import Typical from 'react-typical';
 
+const TypingAnimation =  React.memo(()=>{
+    return <Typical
+        loop={Infinity}
+        wrapper="p"
+        steps={['Software Developer.', 500, 'Researcher.', 500,'Startup Enthusiast.',1500]}
+    />
+},(props,prevProp)=> true );
+
 class Intro extends Component {
     styles=styles;
     render() {
@@ -15,11 +23,7 @@ class Intro extends Component {
                         Aditya Chawla
                     </span>
                     <span style={this.gs('describe-text')}>
-                        <Typical
-                            steps={['Software Developer.', 500, 'Researcher.', 500,'Startup Enthusiast.',1500]}
-                            loop={Infinity}
-                            wrapper="p"
-                        />
+                        <TypingAnimation/>
                     </span>
                 </div>
             </div>

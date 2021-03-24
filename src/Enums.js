@@ -1,3 +1,5 @@
+import React from "react";
+
 const view = {
     DESKTOP: 1,
     TAB:2,
@@ -39,7 +41,41 @@ export const RESUME_POINTERS = [
             "Conducted implementation sessions in which skills learned were demonstrated in real world applications."
 
         ]
+    },
+    {
+        title:"Data Scientist (Part time job) - AgriiPrince (June 2018 - Dec 2018)",
+        pointers:[
+            "Worked on Web Scraping pricing data from agmarknet (government website). The webscraped data was used to make a data lake.",
+            "Scraper ran on AWS EC2 instance and on every successful scrape, a request would be made to a PHP web hook which would store the data in a SQL database on a shared server",
+            "Researched commodity price forecasting using Matrix Completion (the same method used in recommender systems).",
+            "Built an Android module containing webscraped plant disease data."
+        ]
+    },
+    {
+        title:"Project Developer - Edzo (Nov 2017 - Feb 2018)",
+        pointers:[
+            "Created a customer management platform for gyms using Android Studio and firebase.",
+            "Integrated a Diet builder module, messaging and notification module and a scheduling module on a serverless backend using firebase functions."
+        ]
+    },
+    {
+        title:"Software Development Intern - Tnine Infotech (Dec 2015)",
+        pointers:[
+            "Learned Android Studio and Java and at the same time, singlehandedly created an Android App within the span of a month. This app was used by 5k active users every day at it's peak.",
+            "The app could be used to set a circle of user input radius on a map around an input location. The alarm would ring as soons as user would enter this circle.",
+            "App latest apk - https://androidappsapk.co/detail-location-alarm-io-tnine-myapplication/"
+
+        ]
     }
+]
+
+export const SKILLS = [
+    "Backend Development - Springboot (Java)",
+    "Frontend Development - React (Javascript)",
+    "Data Science, Machine Learning - Sklearn, Tensorflow (Python)",
+    "Scripting - (Python and bash)",
+    "Building Composite Containers using Docker",
+    "Container Orchestration using Kubernetes"
 ]
 
 export default view;
